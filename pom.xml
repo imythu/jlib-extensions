@@ -83,11 +83,23 @@
                     <execution>
                         <id>attach-sources</id>
                         <goals>
-                            <goal>jar-no-fork</goal>
+                            <goal>jar</goal>
                         </goals>
                     </execution>
                 </executions>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-deploy-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
         </plugins>
     </build>
+    <distributionManagement>
+        <repository>
+            <id>GitHub</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/imythu/jlib-extentsions</url>
+        </repository>
+    </distributionManagement>
 </project>
