@@ -25,7 +25,7 @@ jobs:
         distribution: 'temurin'
 
     - name: settings.xml
-      run: cat ${{ github.workspace }}/settings.xml
+      run: cat $GITHUB_WORKSPACE/settings.xml
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
