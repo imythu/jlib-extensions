@@ -24,8 +24,11 @@ jobs:
         java-version: '8'
         distribution: 'temurin'
 
+    - name: settings.xml
+      run: cat ${{ github.workspace }}/settings.xml
+
     - name: Build with Maven
-      run: mvn clean package
+      run: mvn -B package --file pom.xml
 
     - name: Publish to GitHub Packages Apache Maven
       run: mvn --batch-mode deploy
