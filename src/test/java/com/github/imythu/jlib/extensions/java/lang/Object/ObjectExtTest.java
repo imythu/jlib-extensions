@@ -14,6 +14,8 @@ import org.junit.jupiter.api.Test;
         Assertions.assertFalse(new Object().safeEquals(""));
         Object obj = null;
         Assertions.assertFalse(obj.safeEquals(new Object()));
+        Assertions.assertFalse(((String) null).safeEquals(""));
+        Assertions.assertTrue(((String) null).safeEquals(null));
         Assertions.assertTrue(obj.safeEquals(null));
     }
 }
