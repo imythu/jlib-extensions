@@ -1,4 +1,4 @@
-# jlib-extentsions
+# jlib-extensions
 
 ## Quickstart
 ### Maven
