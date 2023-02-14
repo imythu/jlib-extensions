@@ -5,7 +5,7 @@ name: Maven Package
 
 on:
   release:
-    types: [created]
+    types: [published]
 
 jobs:
   build:
@@ -21,6 +21,8 @@ jobs:
       with:
         java-version: '8'
         distribution: 'temurin'
+    - name: SetVersion
+      run: mvn versions:set -DnewVersion=$GITHUB_REF_NAME -DprocessAllModules -DgenerateBackupPoms=true
 
     - name: Build with Maven
       run: mvn -B package --file pom.xml
