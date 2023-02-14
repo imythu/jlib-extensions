@@ -11,7 +11,7 @@ import javax.servlet.http.HttpServletRequest;
 import org.junit.jupiter.api.Test;
 
 /**
- * @author zhuhf
+ * @author imythu
  */
 class HttpServletRequestExtTest {
 

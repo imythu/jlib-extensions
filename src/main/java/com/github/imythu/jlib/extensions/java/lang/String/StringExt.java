@@ -5,7 +5,7 @@ import manifold.ext.rt.api.This;
 
 /**
  * from Spring StringUtils
- * @author zhuhf
+ * @author imythu
  */
 @Extension
 public class StringExt {

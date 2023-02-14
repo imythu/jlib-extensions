@@ -5,7 +5,7 @@ import manifold.ext.rt.api.Extension;
 import manifold.ext.rt.api.This;
 
 /**
- * @author zhuhf
+ * @author imythu
  */
 @Extension
 public class ObjectExt {
