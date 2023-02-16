@@ -12,28 +12,13 @@
     <url>https://github.com/imythu/jlib-extensions</url>
 
     <properties>
-        <manifold-version>2022.1.37</manifold-version>
+        <manifold-version>2022.1.38</manifold-version>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>systems.manifold</groupId>
-            <artifactId>manifold</artifactId>
-            <version>${manifold-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>systems.manifold</groupId>
-            <artifactId>manifold-rt</artifactId>
-            <version>${manifold-version}</version>
-        </dependency>
-        <dependency>
-            <groupId>systems.manifold</groupId>
-            <artifactId>manifold-ext</artifactId>
-            <version>${manifold-version}</version>
-        </dependency>
         <dependency>
             <groupId>systems.manifold</groupId>
             <artifactId>manifold-ext-rt</artifactId>
@@ -48,9 +33,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.junit.jupiter</groupId>
-            <artifactId>junit-jupiter</artifactId>
-            <version>RELEASE</version>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.13.2</version>
             <scope>test</scope>
         </dependency>
         <dependency>
@@ -81,11 +66,6 @@
                     </compilerArgs>
                     <!-- Add Manifold compile-time dependencies in the processor path -->
                     <annotationProcessorPaths>
-                        <path>
-                            <groupId>systems.manifold</groupId>
-                            <artifactId>manifold</artifactId>
-                            <version>${manifold-version}</version>
-                        </path>
                         <path>
                             <groupId>systems.manifold</groupId>
                             <artifactId>manifold-ext</artifactId>

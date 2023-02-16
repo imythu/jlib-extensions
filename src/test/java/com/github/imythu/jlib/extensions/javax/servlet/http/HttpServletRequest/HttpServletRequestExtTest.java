@@ -1,19 +1,18 @@
 package com.github.imythu.jlib.extensions.javax.servlet.http.HttpServletRequest;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.Mockito.mock;
 import static org.mockito.Mockito.verify;
 import static org.mockito.Mockito.when;
 
 import java.util.Arrays;
 import javax.servlet.http.HttpServletRequest;
-import org.junit.jupiter.api.Test;
+import org.junit.Assert;
+import org.junit.Test;
 
 /**
  * @author imythu
  */
-class HttpServletRequestExtTest {
+public class HttpServletRequestExtTest {
 
     private static final String[] IP_HEADER_CANDIDATES = {
             "X-Forwarded-For",
@@ -38,7 +37,7 @@ class HttpServletRequestExtTest {
 
         when(request.getRemoteAddr()).thenReturn(localIp);
 
-        assertEquals(request.getClientIp(), localIp);
+        Assert.assertEquals(request.getClientIp(), localIp);
 
         // mock the returned value of request.getParameterMap()
         Arrays.stream(IP_HEADER_CANDIDATES)
@@ -46,6 +45,6 @@ class HttpServletRequestExtTest {
                     when(request.getHeader(s)).thenReturn(ip);
                 });
 
-        assertEquals(request.getClientIp(), ip);
+        Assert.assertEquals(request.getClientIp(), ip);
     }
 }
